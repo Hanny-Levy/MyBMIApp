@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4B0E8"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstNameField"
+        android:layout_width="141dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="144dp"
+        android:layout_height="31dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="First Name :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="17dp" />
+
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Age :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="144dp"
+        android:layout_height="29dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Last Name :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <RadioButton
+        android:id="@+id/femaleButton"
+        android:layout_width="110dp"
+        android:layout_height="34dp"
+        android:text="Female"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <RadioButton
+        android:id="@+id/maleButton"
+        android:layout_width="109dp"
+        android:layout_height="28dp"
+        android:text="Male"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Gender :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/heightLabel"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Height : 140"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:indeterminate="false"
+        android:isScrollContainer="false"
+        android:max="190"
+        android:nestedScrollingEnabled="true"
+        android:progressTint="#FFFFFF"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <TextView
+        android:id="@+id/bodyFrameLabel"
+        android:layout_width="111dp"
+        android:layout_height="34dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Body Frame :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="83dp"
+        android:layout_height="28dp"
+        android:text="Small"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="363dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="83dp"
+        android:layout_height="28dp"
+        android:text="Medium"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:text="Large"
+        tools:layout_editor_absoluteX="288dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+    <EditText
+        android:id="@+id/ageField"
+        android:layout_width="144dp"
+        android:layout_height="29dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <EditText
+        android:id="@+id/lastNameField"
+        android:layout_width="144dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/actualWeightLabel"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Actual weight :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="450dp" />
+
+    <EditText
+        android:id="@+id/actualWeightField"
+        android:layout_width="157dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <TextView
+        android:id="@+id/BMI"
+        android:layout_width="82dp"
+        android:layout_height="28dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="BMI :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="566dp" />
+
+    <TextView
+        android:id="@+id/BMIResult"
+        android:layout_width="86dp"
+        android:layout_height="30dp"
+        android:text="-------------"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="560dp" />
+
+    <TextView
+        android:id="@+id/weightStatusLabel"
+        android:layout_width="141dp"
+        android:layout_height="26dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Weight Status :"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <TextView
+        android:id="@+id/weightStatusResult"
+        android:layout_width="143dp"
+        android:layout_height="28dp"
+        android:text="------------------"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        app:srcCompat="@drawable/bmi"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
