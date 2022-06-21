@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">MyBMI</string>
+    <string name="app_name"> BMI calculator :</string>
+    <string name="firstNameView">First Name :</string>
+    <string name="lastNameView">Last Name :</string>
+    <string name="ageView">Age :</string>
+    <string name="genderView">Gender :</string>
+    <string name="genderOption1">Male</string>
+    <string name="genderOption2">Female</string>
+    <string name="heightView">Height : 140 cm</string>
+    <string name="bodyFrameView">Body Frame :</string>
+    <string name="bodyFrameOption1">Small</string>
+    <string name="bodyFrameOption2">Medium</string>
+    <string name="bodyFrameOption3">Large</string>
+    <string name="actualWeightView">Actual Weight :</string>
+    <string name="submitButton">SUBMIT</string>
+    <string name="clearButton">CLEAR</string>
+    <string name="bmiView"> BMI : </string>
+    <string name="weightStatusView">Weight Status :</string>
+    <string name="bmiPicDes">BMI icon</string>
+    <string name="defaultValue"> </string>
+    <string name="idealWeightView">Ideal Weight :</string>
+
 </resources>
