@@ -2,6 +2,7 @@ package com.example.mybmi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +15,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioGroup  bodyFrameGroup ;
     private WeightStatus weightStatus ;
     double height ;
-    private double actualWeight , age , bmiResult , slimness , idealWeight;
+    private double bmiResult;
+    private double slimness;
     private TextView bmiView , weightStatusView , heightView , idealWeightView;
-    private Button submit , clear ;
     private EditText ageField ,actualWeightField ;
     private SeekBar heightBar ;
 
@@ -24,22 +25,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         bmiView = findViewById(R.id.bmiView);
         weightStatusView = findViewById(R.id.weightStatusView);
         idealWeightView=findViewById(R.id.idealWeightView);
-        submit = findViewById(R.id.submitButton);
-        submit.setOnClickListener(this);
-        clear = findViewById(R.id.clearButton);
-        clear.setOnClickListener(this);
-        bodyFrameGroup=findViewById(R.id.bodyFrameGroup);
-        bmiView.setVisibility(View.INVISIBLE);
-        weightStatusView.setVisibility(View.INVISIBLE);
-        idealWeightView.setVisibility(View.INVISIBLE);
+        Button clear = findViewById(R.id.clearButton);
         ageField = findViewById(R.id.ageField);
         actualWeightField = findViewById(R.id.actualWeightField);
         heightView=findViewById(R.id.heightView);
         heightBar=findViewById(R.id.heightSeekBar);
+        Button submit = findViewById(R.id.submitButton);
+        bodyFrameGroup=findViewById(R.id.bodyFrameGroup);
+
+        bmiView.setVisibility(View.INVISIBLE);
+        weightStatusView.setVisibility(View.INVISIBLE);
+        idealWeightView.setVisibility(View.INVISIBLE);
+
+        submit.setOnClickListener(this);
+        clear.setOnClickListener(this);
         heightBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int value, boolean fromUser) {
                 heightView.setText("Height :" + value + " cm");
@@ -56,12 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         }) ;
-        bodyFrameGroup=findViewById(R.id.bodyFrameGroup);
 
 
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -96,16 +102,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @SuppressLint({"DefaultLocale", "SetTextI18n"})
     private void setBmiResultAndWeightStatus (){
-        actualWeight = Double.parseDouble(String.valueOf(actualWeightField.getText()));
-        age = Double.parseDouble(String.valueOf(ageField.getText()));
+        double actualWeight = Double.parseDouble(String.valueOf(actualWeightField.getText()));
+        double age = Double.parseDouble(String.valueOf(ageField.getText()));
         this.setSlimness();
         bmiResult= (actualWeight / (Math.pow(height, 2)));
         bmiView.setText(getString(R.string.bmiView) + String.format("%.2f",bmiResult));
         this.setWeightStatus();
         weightStatusView.setText(getString(R.string.weightStatusView) + weightStatus.toString());
         height *= 100;
-        idealWeight = (((height - 100 + (age / 10)) * 0.9 * slimness));
+        double idealWeight = (((height - 100 + (age / 10)) * 0.9 * slimness));
         idealWeightView.setText(getString(R.string.idealWeightView)+  String.format("%.2f", idealWeight));
 
         bmiView.setVisibility(View.VISIBLE);
@@ -114,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     private void setSlimness() {
         switch (bodyFrameGroup.getCheckedRadioButtonId()) {
             case R.id.smallButton:
