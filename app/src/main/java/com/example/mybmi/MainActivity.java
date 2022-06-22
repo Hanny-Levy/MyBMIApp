@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onProgressChanged(SeekBar seekBar, int value, boolean fromUser) {
                 heightView.setText("Height :" + value + " cm");
-                height=value/100 ;
+                height=(double)value/100 ;
             }
 
             @Override
